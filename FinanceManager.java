@@ -46,6 +46,15 @@ public class FinanceManager {
         }
         return totalExpenses;
     }
+    public void printTransactions() {
+        System.out.println("\nTransactions:");
+        for (Transaction transaction : transactions) {
+            System.out.println(transaction.getDescription() + " $" + transaction.getAmount());
+        }
+    }
+    public double maxvaluesforthisprogram() {
+        return Double.MAX_VALUE;
+    }
 
     public static void main(String[] args) {
         FinanceManager manager = new FinanceManager();
@@ -55,6 +64,7 @@ public class FinanceManager {
         manager.addTransaction("Rent", -800.0);
         manager.addTransaction("Groceries", -200.0);
         manager.addTransaction("Bonus", 500.0);
+        manager.printTransactions();
 
         // Calculating and displaying totals
         double totalIncome = manager.calculateTotalIncome();
