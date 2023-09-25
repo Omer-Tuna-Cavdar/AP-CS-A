@@ -1,3 +1,4 @@
+package UML_Projects;
 public class Band {
     private String artist;
     private int age;

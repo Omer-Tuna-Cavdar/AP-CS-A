@@ -1,3 +1,4 @@
+package UML_Projects;
  class Rectangle2 {
         private double length;
         private double width;
