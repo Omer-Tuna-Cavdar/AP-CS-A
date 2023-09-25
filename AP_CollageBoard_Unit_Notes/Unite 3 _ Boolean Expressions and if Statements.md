@@ -1,7 +1,9 @@
 ## Unite 3 _ Boolean Expressions and if Statements
 ### Boolean Expressions:
 
-Definition: A Boolean expression is a statement in programming that evaluates to either true or false. These expressions are fundamental for making decisions in your code.
+`Definition: `
+
+A Boolean expression is a statement in programming that evaluates to either true or false. These expressions are fundamental for making decisions in your code.
 
 `Relational Operators:`
 
@@ -35,11 +37,11 @@ Boolean expressions are used to make decisions in programs. For example, you mig
 
 `Definition:`
 
-An if statement in Java is used to execute a block of code conditionally. It allows your Java program to take different paths based on the evaluation of a Boolean expression.
+An if statement is used to execute a block of code conditionally. It allows your Java program to take different paths based on the evaluation of a Boolean expression.
 
 `Basic Structure: `
 
-The basic structure of an if statement in Java is as follows:
+The basic structure of an if statement is as follows:
 
 if (condition) {
     // Code to be executed if the condition is true
