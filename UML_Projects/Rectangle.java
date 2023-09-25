@@ -1,11 +1,11 @@
 package UML_Projects;
 public class Rectangle {
-    private double length;
-    private double width;
-    private double angle;
-    private int sides;
-    private String name;
-    Rectangle(){
+    private double length;//declaring variable
+    private double width;//declaring variable
+    private double angle;//declaring variable
+    private int sides;//declaring variable
+    private String name;//declaring variable
+    Rectangle(){//default constructor
         length = 1;
         width = 2;
         angle = 90;
@@ -13,28 +13,29 @@ public class Rectangle {
         name = "Rectangle";
     }
     Rectangle(double length, double width, double angle, int sides, String name){
+        //constructor
         this.length = length;
         this.width = width;
         this.angle = angle;
         this.sides = sides;
         this.name = name;
     }
-    Double getLength(){
+    Double getLength(){//getter
         return length;
     }   
-    Double getWidth(){
+    Double getWidth(){//getter
         return width;
     }   
-    String String(){
+    String String(){//to string method
         return "Length: " + this.length + " Width: " + this.width + " Angle: " + this.angle + " Sides: " + this.sides + " Name: " + this.name;
     }
-    void setLength(double length){
+    void setLength(double length){//setter
         this.length = length;
     }
-    void setWidth(double width){
+    void setWidth(double width){//setter
         this.width = width;
     }
-    Boolean Equals(Rectangle rectangle){
+    Boolean Equals(Rectangle rectangle){//equals method
         if (this.length == rectangle.length && this.width == rectangle.width && this.angle == rectangle.angle && this.sides == rectangle.sides && this.name == rectangle.name){
             return true;
         }
@@ -42,10 +43,10 @@ public class Rectangle {
             return false;
         }
     }
-    Double getArea(){
+    Double getArea(){//getter
         return length * width;
     }
-    Double getPerimeter(){
+    Double getPerimeter(){//getter
         return 2 * (length + width);
     }
     class Square extends Rectangle{

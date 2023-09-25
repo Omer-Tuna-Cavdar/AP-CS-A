@@ -1,43 +1,43 @@
 package UML_Projects;
 public class Dog {
-    private String name;
-    private String breed;
-    private int age;
-    void dog(){
+    private String name;//declaring variable
+    private String breed;//declaring variable
+    private int age;//declaring variable
+    void dog(){//default constructor
         name = "Karabas";
         breed = "Kangal";
         age = 2;
     }
-    void dog(String name, String breed, int age){
+    void dog(String name, String breed, int age){//constructor
         this.name = name;
         this.breed = breed;
         this.age = age;
     }
-    String getName(){
+    String getName(){//getter
         return name;
     }   
-    String getBreed(){
+    String getBreed(){//getter
         return breed;
     }
-    Integer getAge(){
+    Integer getAge(){//getter
         return age;
     }
-    String String(){
+    String String(){//to string method
         return "Name: " + this.name + " Breed: " + this.breed + " Age: " + this.age;
     }
-    String setName(String name){
+    String setName(String name){//setter
         this.name = name;
         return name;
     } 
-    String setBreString(String breed){
+    String setBreString(String breed){//setter
         this.breed = breed;
         return breed;
     }
-    Integer setAge(int age){
+    Integer setAge(int age){//setter
         this.age = age;
         return age;
     }
-    Boolean equals(Dog dog){
+    Boolean equals(Dog dog){//equals method
         if (this.name == dog.name && this.breed == dog.breed && this.age == dog.age){
             return true;
         }
@@ -45,13 +45,13 @@ public class Dog {
             return false;
         }
     }
-    public static void main(String[] args) {
-        Dog dog1 = new Dog();
-        Dog dog2 = new Dog();
-        dog1.dog();
-        dog2.dog("Kara", "Kangal", 3);
-        System.out.println(dog1.String());
-        System.out.println(dog2.String());
-        System.out.println(dog1.equals(dog2));
+    public static void main(String[] args) {//main method
+        Dog dog1 = new Dog();//creating object dog1
+        Dog dog2 = new Dog();//creating object dog2
+        dog1.dog();//calling constructor
+        dog2.dog("Kara", "Kangal", 3);//calling constructor
+        System.out.println(dog1.String());//printing dog1
+        System.out.println(dog2.String());//printing dog2
+        System.out.println(dog1.equals(dog2));//printing dog1 equals dog2
     }
 }
