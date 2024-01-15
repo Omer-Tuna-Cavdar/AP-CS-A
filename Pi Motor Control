@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 from pyPS4Controller.controller import Controller
 
-# Motor GPIO Pins (Change as per your connection)
+# Motor GPIO Pins (CHANGE THIS DO NOT FORGET AND FREAK OUT FUTURE ME)
 LEFT_MOTOR_FORWARD = 17
 LEFT_MOTOR_BACKWARD = 27
 RIGHT_MOTOR_FORWARD = 22
