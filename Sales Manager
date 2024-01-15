@@ -45,9 +45,9 @@ class Customer {
 
 // Define the Product class
 class Product {
-    private String productName;
-    private int productID;
-    private int productQuantity;
+    protected String productName;
+    protected int productID;
+    protected int productQuantity;
 
     // Constructor
     public Product(String productName, int productID, int productQuantity) {
@@ -81,13 +81,34 @@ class Product {
         return productID;
     }
 }
+class FoodnDrugs extends Product {
+    private int expirationDate;
+
+    public FoodnDrugs(String productName, int productID, int productQuantity, int expirationDate) {
+        super(productName, productID, productQuantity);
+        this.expirationDate = expirationDate;
+    }
+
+    public void setExpirationDate(int expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public int getExpirationDate() {
+        return expirationDate;
+    }
+    public void isExpired(int expirationDate){
+        if (expirationDate < 2024){
+            productQuantity = 0;
+        }
+    }
+}
 
 // Define the SalesInterface interface
-interface SalesInterface {
+interface SalesInterface extends ProductInterface, Customer{
     void sale(int customerID, int productID);
     void redeem(int customerID, int productID);
 }
-
+//User Interface
 public class SalesSystemUI extends JFrame implements SalesInterface {
     private ArrayList<Customer> customerList = new ArrayList<>();
     private ArrayList<Product> productList = new ArrayList<>();
@@ -233,7 +254,6 @@ public class SalesSystemUI extends JFrame implements SalesInterface {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new SalesSystemUI().setVisible(true);
             }
