@@ -1,14 +1,14 @@
 package İnheritance;
 
 public class Cat extends Pet {
-    private String color;
-    public Cat(String n, String t, String c){
+    private int age;
+    public Cat(String n, String t, int a){
         super(n, t);
-        color = c;
+        age = a;
     }
     public Cat(){
         super();
-        color = "No color yet.";
+        age = 0;
     }
     @Override
     public void eatfood(){
@@ -16,7 +16,7 @@ public class Cat extends Pet {
     }
     @Override
     public String toString(){
-        return super.toString() + "Color: " + color;
+        return super.toString() + "Age: " + age;
     }
     
 }
